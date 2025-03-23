@@ -1,0 +1,28 @@
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Webbshop - Kassa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Min Webbshop - Kassa</h1>
+    
+    <h2>Dina produkter</h2>
+    <div id="checkout-items"></div>
+    <p id="checkout-total"></p>
+    
+    <h3>Fyll i dina uppgifter:</h3>
+    <label for="name">Namn:</label>
+    <input type="text" id="name" placeholder="Ditt namn"><br>
+
+    <label for="email">E-post:</label>
+    <input type="email" id="email" placeholder="Din e-post"><br>
+
+    <button onclick="placeOrder()">Slutför köp</button>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
