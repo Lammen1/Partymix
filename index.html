@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Webbshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Välkommen till PartyMix</h1>
+
+    <input type="text" id="search" placeholder="Sök produkt..." onkeyup="searchProducts()">
+    <button onclick="sortByPrice()">Sortera efter pris</button>
+    <button onclick="sortByName()">Sortera efter namn</button>
+
+    <div class="product-container">
+        <div class="product">
+            <img src="images/produkt1.jpg" alt="Produkt 1">
+            <h2>Produkt 1</h2>
+            <p>Pris: 199 kr</p>
+            <button onclick="addToCart('Produkt 1', 199)">Köp</button>
+        </div>
+
+        <div class="product">
+            <img src="images/produkt2.jpg" alt="Produkt 2">
+            <h2>Produkt 2</h2>
+            <p>Pris: 299 kr</p>
+            <button onclick="addToCart('Produkt 2', 299)">Köp</button>
+        </div>
+
+        <div class="product">
+            <img src="images/produkt3.jpg" alt="Produkt 3">
+            <h2>Produkt 3</h2>
+            <p>Pris: 399 kr</p>
+            <button onclick="addToCart('Produkt 3', 399)">Köp</button>
+        </div>
+    </div>
+
+    <h2>Varukorg</h2>
+    <ul id="cart-list"></ul>
+    <p id="total-price">Totalt: 0 kr</p>
+
+    <a href="checkout.html">
+        <button>Gå till kassan</button>
+    </a>
+    
+
+    <div id="checkout" style="display: none;">
+        <h2>Kassa</h2>
+        
+        <p>Fyll i dina uppgifter:</p>
+        <label for="name">Namn:</label>
+        <input type="text" id="name" placeholder="Ditt namn"><br>
+
+        <label for="email">E-post:</label>
+        <input type="email" id="email" placeholder="Din e-post"><br>
+
+        <p id="checkout-items"></p>
+        <p id="checkout-total"></p>
+
+        <button onclick="placeOrder()">Slutför köp</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
